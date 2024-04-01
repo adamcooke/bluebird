@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"os"
 
+	"github.com/adamcooke/bluebird/config"
 	tea "github.com/charmbracelet/bubbletea"
 	"github.com/spf13/cobra"
 	"gopkg.in/yaml.v2"
@@ -15,7 +16,7 @@ var (
 )
 
 var rootCmd = &cobra.Command{
-	Use:   "bb",
+	Use:   "bluebird",
 	Short: "Bluebird is a alias tool.",
 	Long:  `Bluebird is a TUI for accessing various aliased commands. Ideal for accessing other services over SSH or through kubectl.`,
 	Run: func(cmd *cobra.Command, args []string) {
@@ -31,7 +32,7 @@ var rootCmd = &cobra.Command{
 			os.Exit(1)
 		}
 
-		c := config{path: configFilePath}
+		c := config.Config{Path: configFilePath}
 
 		data, err := os.ReadFile(configFilePath)
 		if err == nil {
@@ -43,7 +44,7 @@ var rootCmd = &cobra.Command{
 			}
 		}
 
-		p := tea.NewProgram(initialModel(c))
+		p := tea.NewProgram(initialModel(c), tea.WithAltScreen())
 		if _, err := p.Run(); err != nil {
 			fmt.Printf("Alas, there's been an error: %v", err)
 			os.Exit(1)

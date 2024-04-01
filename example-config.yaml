@@ -1,0 +1,45 @@
+items:
+  - name: Food
+    emoji: 🍔
+    type: list
+    listOptions:
+      items: 
+        - name: Fruits
+          type: list
+          listOptions:
+            items:
+              - name: Apple
+                type: command
+                commandOptions:
+                  command: ssh adam@vm.adam.ac
+              - name: Banana
+                type: command
+                commandOptions:
+                  command: echo "Yes"
+              - name: Orange
+                type: command
+                commandOptions:
+                  command: blahblah
+              - name: Kiwi
+        - name: Vegtables
+          type: list
+          listOptions:
+            items:
+              - name: Potato
+              - name: Carrot
+              - name: Tomato
+              - name: Lettuce
+              - name: Cucumber
+
+  - name: Birds
+    emoji: 🦆
+    type: list
+    listOptions:
+      items:
+        - name: Duck
+        - name: Hen
+        - name: Swan
+        - name: Goose
+        - name: Turkey
+        - name: Chicken
+        - name: Cock
