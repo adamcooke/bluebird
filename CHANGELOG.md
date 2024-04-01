@@ -1,5 +1,27 @@
 # Changelog
 
+## [0.0.2](https://github.com/adamcooke/bluebird/compare/v0.0.1...v0.0.2) (2024-04-01)
+
+
+### Features
+
+* clear the termainl in exit ([8a29d6b](https://github.com/adamcooke/bluebird/commit/8a29d6b59c227448a726601bd99c79ee36b4bcbe))
+
+
+### Documentation
+
+* update README ([799efd0](https://github.com/adamcooke/bluebird/commit/799efd0f04daaba862368f7400c35d090a98474e))
+
+
+### Miscellaneous Chores
+
+* ignore the build dir ([81c5d75](https://github.com/adamcooke/bluebird/commit/81c5d75adae0d4c4c50fe06088eebabfe421a969))
+
+
+### Code Refactoring
+
+* refactor everything ([d184dc3](https://github.com/adamcooke/bluebird/commit/d184dc325de33d9e452f2f8c13c01e55ddfd79e7))
+
 ## 0.0.1 (2024-03-24)
 
 
